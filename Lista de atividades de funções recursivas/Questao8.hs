@@ -4,7 +4,13 @@
     -- c) selecione o último elemento de uma lista não-vazia.
 
 --a)
+mySum :: (Eq a, Num a) => [a] -> a
 mySum (x:xs)
     |(x:xs) == [] = 0
     |xs == [x] = x
     |otherwise = x + sum xs
+
+--b)
+myTake n (x:xs)
+    | n == 0 = []
+    | otherwise = x : myTake (n-1) xs
