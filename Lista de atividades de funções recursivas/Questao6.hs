@@ -5,6 +5,7 @@
 
 
 
+merge' :: Ord a => [a] -> [a] -> [a]
 merge' [] ys = ys
 merge' xs [] = xs
 merge' (x:xs) (y:ys)
