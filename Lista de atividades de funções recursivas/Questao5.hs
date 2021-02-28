@@ -34,6 +34,7 @@ myReplicate n v
     |otherwise = xs !!! (n-1)
 
 --e)
+myElem :: Eq t => t -> [t] -> Bool
 myElem v (x:xs)
     |null xs = False
     |v == x = True 
