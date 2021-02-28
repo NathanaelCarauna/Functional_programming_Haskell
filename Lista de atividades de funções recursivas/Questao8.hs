@@ -11,6 +11,12 @@ mySum (x:xs)
     |otherwise = x + sum xs
 
 --b)
+myTake :: (Eq t, Num t) => t -> [a] -> [a]
 myTake n (x:xs)
     | n == 0 = []
     | otherwise = x : myTake (n-1) xs
+
+--c)
+myLast (x:xs)
+    |xs == [x] = x
+    |otherwise = last xs
