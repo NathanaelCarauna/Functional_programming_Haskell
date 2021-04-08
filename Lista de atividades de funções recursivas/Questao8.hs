@@ -19,4 +19,4 @@ myTake n (x:xs)
 --c)
 myLast (x:xs)
     |xs == [x] = x
-    |otherwise = last xs
+    |otherwise = myLast xs

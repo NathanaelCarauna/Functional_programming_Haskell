@@ -12,8 +12,7 @@
 
 --a)
 myAnd :: [Bool] -> Bool 
-myAnd [] = False 
-myAnd [x] = x
+myAnd [] = True 
 myAnd (x:xs) = x && myAnd xs
 
 --b)

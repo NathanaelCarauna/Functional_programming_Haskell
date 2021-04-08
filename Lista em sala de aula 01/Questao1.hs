@@ -13,10 +13,12 @@ maior :: (Ord a, Ord b, Num b, Enum b) => [a] -> (a, b)
 maior lista = last $ sort $geraListaTuplas lista
 
 -- Resposta 2
+maiorAB :: Ord a => (a, b) -> (a, b) -> (a, b)
 maiorAB (a, b) (c,d) 
     |a > c = (a,b)
     |otherwise = (c,d)
 
+maior2 :: (Ord a, Num b, Enum b) => [a] -> (a, b)
 maior2 lista = foldr maiorAB (head listaTuplas) listaTuplas
                 where
                     listaTuplas = geraListaTuplas lista
